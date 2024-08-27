@@ -1,30 +1,19 @@
-package Jpre;
-
-import java.util.*;
-import java.io.*;
-
-public class Clock {
-
-	public static void main(String[] args) throws Exception {
-		Scanner s = new Scanner(System.in);
-		System.out.print("Enter the Hours,mins and Sec: ");
-		int h = s.nextInt();
-
-		int m = s.nextInt();
-		int sec = s.nextInt();
-		System.out.println("Clock");
-		System.out.println("=====");
-
-		for (h = h; h < 24; h++) {
-			for (m = m; m < 60; m++) {
-				for (sec = sec; sec < 60; sec++) {
-					System.out.println(h + ":" + m + ":" + sec + "\r");
+class Clock{
+	public static void main(String args[]) throws Exception{
+		for(int i = 0; i<24; i++){
+			for(int j = 0; j<60; j++)
+			{
+				for(int k = 0; k<60; k++)
+				{	
+					String hours = i > 9? Integer.toString(i) : "0"+Integer.toString(i);
+					String mins = j > 9? Integer.toString(j) : "0"+Integer.toString(j);
+					String seconds = k > 9? Integer.toString(k) : "0"+Integer.toString(k);
+					System.out.print(hours+":"+mins+":"+seconds+"\n");
 					Thread.sleep(1000);
 				}
-				sec = 0;
-			}
-			m = 0;
+			}	
 		}
-		h = 0;
+	
 	}
+
 }

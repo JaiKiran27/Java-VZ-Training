@@ -1,10 +1,14 @@
-package mypackage;
-
-public class Demo {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-System.out.println("Hello");
-	}
-
+class Demo
+{
+public static void main(String args[])
+{
+int a=10,b=0;
+try{
+System.out.println(a/b);
+}
+catch(Exception e)
+{
+System.out.println("Arithmetic");
+}
+}
 }
